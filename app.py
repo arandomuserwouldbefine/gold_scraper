@@ -113,4 +113,4 @@ def get_graph_data():
 if __name__ == "__main__":
     scrape_process = subprocess.Popen(['python3', 'scrape.py'])
 
-    app.run(host='0.0.0.0',port=8000)
+    app.run(host='0.0.0.0',port=8000,debug=True)

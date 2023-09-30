@@ -69,11 +69,11 @@ html{
                     <li><a href="/">Home</a></li>
                     <li><a href="/products">Our Products</a></li>
                     <li><a href="/contact">Contact</a></li>
-                    <li><a href="mailto:rozainigoldbullionandjewellery@gmail.com"><img class="logo" src="{{ url_for('static', filename='products/Images/MailGold.png')}}" alt="Logo" width="50"></a></li>
-                    <li><a href="https://www.instagram.com/rozainigoldbullionjewellery/"><img class="logo" src="{{ url_for('static', filename='products/Images/InstagramCircleGold.png')}}" alt="Logo" width="50"></a></li>
-                    <li><a href="https://wa.me/601124246969">
-                <img class="logo" src="{{ url_for('static', filename='Images/WhatsappGold.png')}}" alt="Logo" width="50">
-              </a></li>
+                    <li><a href="mailto:rozainigoldbullionandjewellery@gmail.com"><img class="" src="{{ url_for('static', filename='products/Images/MailGold.png')}}" alt="Logo" width="50"></a></li>
+
+                    <li><a href="https://www.instagram.com/rozainigoldbullionjewellery/"><img class="" src="{{ url_for('static', filename='products/Images/InstagramCircleGold.png')}}" alt="Logo" width="50"></a></li>
+
+                    <li><a href="https://wa.me/601124246969"><img class="" src="{{ url_for('static', filename='Images/WhatsappGold.png')}}" alt="Logo" width="50"></a></li>
                 </ul>
             </div>
 
@@ -126,7 +126,7 @@ html{
 			});
 		</script>
 
-<div class="container" style="padding-top: 70px;">
+<div class="container" style="padding-top: 50px; margin-bottom: 40px;">
   <div class="text-idea text-center mx-auto mb-5 mt-5" style="max-width: 1280px; background-image: url('{{ url_for('static', filename='Images/venice_boat.jpeg') }}'); background-size: cover; background-position: center; height: 380px; background-repeat: no-repeat;">
 
 		<div class="row pt-2">
@@ -138,7 +138,7 @@ html{
 		</div>
 	</div>
 </div>
-	<div class="row text-center">
+	<div class="row text-center" style="margin-top:350px;">
     		<p class="display-6 animated place slideInDown"> — <span id="custom-date">19 September 2023</span> — <br><b> <span id="custom-time">10:43:33</span></b></p>
 		<div class="col-lg-6 p-4 d-flex flex-column justify-content-center cont">
 			<div class="scroll d-flex flex-column justify-content-center">
@@ -678,6 +678,10 @@ setInterval(fetchGraphData, 5000);
 
 </script>
 <!-- <script src="https://msgold.com.my/js/ajax.js?a=c111741cd2f1c78603f2e393e643f280"></script> -->
+<script>
+ localStorage.setItem("mode" , "dark-mode");
+
+</script>
 
 <script>
 
@@ -693,7 +697,6 @@ const body = document.querySelector("body"),
             body.classList.add("dark");
           }
 
-            localStorage.setItem("mode" , "dark-mode");
 
  
       
