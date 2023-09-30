@@ -57,7 +57,7 @@ html{
    <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen' ></i>
-            <span class="logo navLogo"><a href="/"><img class="logo" src="{{ url_for('static', filename='Images/n-logo_1.png')}}" alt="Logo" width="80"></a></span>
+            <span class="logo navLogo"><a href="/"><img class="logo" src="{{ url_for('static', filename='Images/n-logo_1.png')}}" alt="Logo" width="50"></a></span>
 
             <div class="menu">
                 <div class="logo-toggle">
@@ -276,55 +276,51 @@ html{
 		</table>
 	</div>
 </div>
-      <footer class="site-footer section-padding" id="contact">
-	<div class="container" style="max-width: 1128px;">
-		<div class="row justify-content-center">
-			<div class="col-lg-4 me-auto">
-				<h5 class="mb-lg-4 mb-3">INFORMATION</h5>
-				<div class="list-icon txt1" style="padding-top: 10px;">
-					<p><a href="#">Our Prices</a></p>
-				</div>
-			</div>
+<footer class="site-footer" id="contact">
+	
+	<div class="footer_content">
+		
+		<div class="information">
+			<ul type="none" class="contact_det">
+				<li class="list_title">Information</li>
+				<li class="list_items"><a href="/" class="link_lists">Home</a></li>
+				<li class="list_items"><a href="/products" class="link_lists">Our Products</a></li>
+				<li class="list_items"><a href="/contact" class="link_lists">Contact</a></li>
+				<li class="list_items"><a href="/disclaimer" class="link_lists">Disclaimer</a></li>
 
-			<div class="col-lg-4 col-md-6 my-lg-0">
-				<h5 class="mb-lg-4 mb-3">CONTACT DETAILS</h5>
-				<div class="list-icon" style="padding-top: 10px;">
-					<p>Rozaini Gold Bullion And Jewellery</p>
-					<a href="https://goo.gl/maps/4cnWxztxLxCw52aC9" target="_blank">
-						<p class="montsserat">No. 48, Jalan Baiduri 1, Taman Pulau Melaka, 75000, Melaka</p>
-					</a>
-					<div class="row">
-						<div class="col-md-6">
-							<p style="margin: 0;"><a href="tel:+601124246969">+6011 2424 6969</a></p>
-						</div>
-						<div class="col-md-6">
-							<div class="image-icon">
-								<a href="https://wa.me/601124246969" target="_blank"><img class="img-responsive" src="{{ url_for('static', filename='Images/ws.png') }}"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			</ul>
 
-			<div class="col-lg-4 col-md-6 ms-auto">
-				<h5 class="mb-lg-4 mb-3">FOLLOW US</h5>
-				<div class="list-icon" style="padding-top: 10px;">
-					<ul style="list-style-type:none;">
-						<li>
-							<a href="https://www.instagram.com/rozainigoldbullionjewellery/" target="_blank"><img class="img-responsive" src="{{ url_for('static', filename='Images/ig.png') }}"></a>
-						</li>
-					</ul>
-				</div>
-			</div>
 		</div>
+
+		<div class="contact_detail">
+			<ul type="none" class="contact_det">
+				<li class="list_title">Contact Details</li>
+				<li  class="list_items">No. 48, Jalan Baiduri 1, Taman Pulau Melaka, 75000, Melaka</li>
+				<li  class="list_items">+6011 2424 6969</li>
+			</ul>
+		</div>
+
+		<div class="follow_us">
+			<ul type="none" class="social_media">
+				<li class="list_title">Follow Us</li>
+				<li><a href="https://www.instagram.com/rozainigoldbullionjewellery/"><img class="" src="{{ url_for('static', filename='products/Images/InstagramCircleGold.png')}}" alt="Logo" width="50"></a></li>
+
+				<li><a href="https://wa.me/601124246969">
+                <img class="" src="{{ url_for('static', filename='Images/WhatsappGold.png')}}" alt="Logo" width="50"></a></li>
+			</ul>
+		</div>
+
 	</div>
+
+
 	<div class="container-fluid">
 		<div class="row text-end">
-			<div class="col-lg-12 col-md-12 ms-auto" style="padding-top: 10px;">
-				<p style="color: #A6A6A6; font-size:small;">|<a href="/disclaimer" style="color: #A6A6A6;"> Disclaimer</a> | ©2023 Rozaini Gold Bullion and Jewellery. All Rights Reserved.</p>
+			<div class="col-lg-12 col-md-12 ms-auto" style="padding-top: 10px; text-align: center;">
+				 <img src="https://cdn.britannica.com/31/4031-004-82B0F3A9/Flag-Malaysia.jpg" width="4%" style="margin-bottom: 4px;margin-right: 4px;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_Malacca.svg/1200px-Flag_of_Malacca.svg.png"  style="width: 4%;margin-bottom: 4px;margin-right: 4px">©2023 Rozaini Gold Bullion And Jewellery | Disclaimer. All Rights Reserved.</p>
 			</div>
 		</div>
 	</div>
+<footer>
   </body>
   <script>AOS.init();</script>
 <script type="text/javascript">
