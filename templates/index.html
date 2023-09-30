@@ -1,0 +1,427 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+	<meta name="description" content="gold bar, gold coins, gold accessories">
+    <meta name="keywords" content="gold bar, gold coins, gold accessories">
+	<meta name="author" content="RUBYSOFT">
+    <link rel="icon" sizes="57x57" href="/static/Images/n-logo_1.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/static/Images/favi-57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/Images/favi-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/Images/favi-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/Images/favi-144.png">
+
+	<title>Rozaini Gold Bullion And Jewellery</title>
+
+	<link rel="stylesheet" href="/static/css/animate.min.css">
+	<!--<script src="js/Chart.js"></script>-->
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+
+	<link href="/static/css/animate.min_1.css" rel="stylesheet">
+	<link href="/static/css/owl.carousel.min.css" rel="stylesheet">
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/css/bootstrap-icons.css" rel="stylesheet">
+	<link href="/static/css/owl.carousel.min_1.css" rel="stylesheet">
+	<link href="/static/css/owl.theme.default.min.css" rel="stylesheet">
+	<link href="/static/css/jarallax.css" rel="stylesheet">
+	<link rel="stylesheet" href="/static/css/aos.css">
+<!-- <link href="css/main.css?ver=10" rel="stylesheet"> -->
+    <link rel="stylesheet" href="/static/css/style.css">
+	<script async src="/static/js/analytics.js"></script>
+	<script type="text/javascript" src="/static/js/scripts.js"></script>
+	<script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<style>
+@media screen and (max-width: 1401px) {
+	.block {display: block;}
+	.navbar-toggler {display: block;}
+	.logo {width: 12%;}
+	.navImg {display: none;}
+	.corpBlock {display: block;}
+	.navbar-expand-lg .navbar-nav .nav-link {padding-right: 0;padding-left: 0;}
+}
+@media screen and (min-width: 1401px) {
+	.block {display: none;}
+	.navbar-toggler {display: none;}
+	.navImg {display: block;}
+	.corpBlock {display: none;}
+	.navbar-expand-lg .navbar-nav .nav-link {padding-right: 3rem;padding-left: 3rem;}
+
+}
+@media screen and (max-width: 768px) {
+	.logo {width: 20%;margin-right: 20px}
+}
+@media screen and (max-width: 469px) {
+	.logo {width: 30%;}
+}
+.navbar-brand {	width: 80%;	}
+li.nav-item {white-space: nowrap;}
+.pload {width:40px; height:30px !important;}
+#hours{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 1rem;
+}
+  .mr-2{
+    margin-right: 30px;
+  }
+
+  .ml-2{
+    margin-left: 30px;
+  }
+  .d-inline-flex {
+    display: inline-flex!important;
+}
+  .header-link{
+    font-weight: 800 !important;
+    text-decoration: underline !important;
+    font-size: 36px;
+  }
+  @media (max-width: 1399px) {
+    .close {
+        display: none !important;
+    }
+}
+  @media (min-width: 1400px){
+    .open{
+      display: none !important
+    }
+  }
+
+
+</style></head>
+
+
+
+<body id="top">
+
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="/"><img class="" src="{{ url_for('static', filename='Images/n-logo_1.png')}}" alt="Logo" width="80"></a></a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="/">Rozaini</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Our Products</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="mailto:rozainigoldbullionandjewellery@gmail.com"><img class="" src="{{ url_for('static', filename='products/Images/MailGold.png')}}" alt="" width="50"></a></li>
+                    <li><a href="https://www.instagram.com/rozainigoldbullionjewellery/"><img class="" src="{{ url_for('static', filename='products/Images/InstagramCircleGold.png')}}" alt="Logo" width="50"></a></li>
+                    <li><a href="https://wa.me/601124246969">
+                <img class="" src="{{ url_for('static', filename='Images/WhatsappGold.png')}}" alt="Logo" width="50">
+              </a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+	<main>
+ 
+
+
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+			    var link = document.querySelector("link[rel='apple-touch-icon']");
+
+			    link.href = "{{ url_for('static', filename='Images/favi-57.png') }}";
+			});
+			document.addEventListener("DOMContentLoaded", function() {
+				const dropdown = document.querySelector(".dropdown");
+				const dropdownLink = document.querySelector(".dropdown > a");
+				const dropdownContent = document.querySelector(".dropdown-content");
+
+				dropdownLink.addEventListener("mouseover", function() {
+					dropdownContent.style.display = "block";
+					setTimeout(function() {
+						dropdownContent.style.opacity = "1"; 
+					}, 10);
+
+				});
+
+				dropdown.addEventListener("mouseout", function(event) {
+					// Check if the mouse is leaving the dropdown area
+					if (!dropdown.contains(event.relatedTarget)) {
+						dropdownContent.style.opacity = "0";
+						setTimeout(() => {
+							dropdownContent.style.display = "none";
+						}, 300);
+					}
+				});
+			});
+		</script><div class="container justify-content-center">
+<div class="text-idea text-center mx-auto mb-5 mt-5" style="max-width: 1280px; background-image: url('{{ url_for('static', filename='Images/proposal.jpg') }}'); background-size: cover; background-position: center; height: 380px; background-repeat: no-repeat;">
+
+		<div class="row pt-2">
+			<div class="col-md-12" data-aos="fade-up" data-aos-duration="3000">
+				<div class="corp">
+					<h2>OUR PRODUCTS</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container pb-1">
+	<div class="row text-center all_products_card justify-content-center">
+
+	</div>
+	<div class="row text-center product_cards" style="padding-top: 20px;">
+		
+	</div>
+</div>
+
+
+
+
+
+<div class="container py-4" data-aos="fade-up" data-aos-duration="3000">
+	<div class="row">
+		<div class="col-lg-12 box-text text-center">
+			<p>MS Gold Bullion also specializes in the importation of exceptional precious metals products from renowned mints worldwide, bringing the finest offerings to the Malaysian market. We source our inventory from some of the world's most prestigious mints, ensuring that our customers have access to the highest quality and most sought-after products in the industry.</p>
+		</div>
+	</div>
+</div>
+
+<footer class="site-footer section-padding" id="contact">
+	<div class="container" style="max-width: 1128px;">
+		<div class="row justify-content-center">
+			<div class="col-lg-4 me-auto">
+				<h5 class="mb-lg-4 mb-3">INFORMATION</h5>
+				<div class="list-icon txt1" style="padding-top: 10px;">
+					<p><a href="index.php">HOME</a></p>
+					<p><a href="about.php">ABOUT US</a></p>
+					<p><a href="corporate.php">CORPORATE RESPONSIBILITY</a></p>
+					<p><a href="product.php">PRODUCTS</a></p>
+					<p><a href="service.php">SERVICES</a></p>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 my-lg-0">
+				<h5 class="mb-lg-4 mb-3">CONTACT DETAILS</h5>
+				<div class="list-icon" style="padding-top: 10px;">
+					<p>MS Gold Bullion Sdn Bhd</p>
+					<a href="https://goo.gl/maps/4cnWxztxLxCw52aC9" target="_blank">
+						<p class="montsserat">No.7, Jalan 2/131 A, Project Jaya Industrial Estate Batu 6, Jalan Klang Lama, 58200 Kuala Lumpur, Malaysia.</p>
+					</a>
+					<div class="row">
+						<div class="col-md-6">
+							<p style="margin: 0;"><a href="tel:+60163317611">+6016 331 7611</a></p>
+							<p style="margin: 0;"><a href="tel:+60377831080">+603 7783 1080</a></p>
+						</div>
+						<div class="col-md-6">
+							<div class="image-icon">
+								<a href="https://wa.me/60196538807" target="_blank"><img class="img-responsive" src="{{ url_for('static', filename='Images/ws.png') }}"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 ms-auto">
+				<h5 class="mb-lg-4 mb-3">FOLLOW US</h5>
+				<div class="list-icon" style="padding-top: 10px;">
+					<ul style="list-style-type:none;">
+						<li>
+							<a href="http://instagram.com/msgoldbullion" target="_blank"><img class="img-responsive" src="{{ url_for('static', filename='Images/ig.png') }}"></a>
+						</li>
+						<li>
+							<a href="http://facebook.com/msgoldbullion" target="_blank"><img class="img-responsive" src="{{ url_for('static', filename='Images/fb.png') }}"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row text-end">
+			<div class="col-lg-12 col-md-12 ms-auto" style="padding-top: 10px;">
+				<p style="color: #A6A6A6; font-size:small;"><a href="#" style="color: #A6A6A6;">Privacy Policy </a>|<a href="#" style="color: #A6A6A6;"> Terms Of Use</a> | ©2023 MS Gold Bullion Sdn Bhd (1116436-P). All Rights Reserved.</p>
+			</div>
+		</div>
+	</div>
+<footer>
+
+<!-- JAVASCRIPT FILES -->
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/scrollspy.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+<script>AOS.init();</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2278368-89', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script>
+
+function numberWithCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+function fetchData() {
+    var boxImageDiv = document.querySelector(".all_products_card");
+
+    // Clear previous data
+    boxImageDiv.innerHTML = "";
+
+    fetch("/data", {
+        method: "POST"
+    })
+    .then(response => response.json())
+    .then(data => {
+
+
+        // Populate the boxImageDiv with fetched data
+        data.forEach(item => {
+		let totalPrice = parseFloat(item.price_darkteal) + parseFloat(item.additional_price);
+   	    let formattedPrice = totalPrice.toFixed(2)
+   	    formattedPrice = numberWithCommas(formattedPrice)
+        var content = `
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="box-image">
+                    <img class="img-responsive" src="static/${item.image_path}" alt='gold'>
+                    <h2>${item.product_name}</h2>
+                    <span>Au 9999 Pure Gold</span>
+                    <h3>${item.currency} ${formattedPrice}</h3>
+                </div>
+            </div>
+        `;
+
+        let numberWithComma = item.price_darkteal;
+        let numberToAdd = item.additional_price;
+        let number1 = parseFloat(numberWithComma.toString().replace(/,/g, ''), 10);
+        let totalSum = number1 + numberToAdd;
+        let formatPrice = totalSum.toFixed(2);
+        formatPrice = parseFloat(formatPrice).toLocaleString();
+        var content2 = `
+            <div class="col-lg-5 col-md-6 col-12">
+                <div class="box-image">
+                    <img class="img-responsive" src="static/${item.image_path}" alt='gold'>
+                    <h2>${item.product_name}</h2>
+                    <span>Au 9999 Pure Gold</span>
+                    <h3>${item.currency} ${formatPrice}</h3>
+                </div>
+            </div>
+        `;
+        	if (item.ids === ""){
+				boxImageDiv.innerHTML += content;
+        	}
+        	else{
+        		boxImageDiv.innerHTML += content2;
+        	}
+            
+        });
+    })
+    .catch(error => {
+        console.error("Error fetching data:", error);
+    });
+}
+
+// Fetch and display data initially when the page loads
+fetchData();
+
+// Fetch data every 10 seconds
+setInterval(fetchData, 10000);
+
+</script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js'></script>
+
+<script>
+
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+
+
+</script>
+
+</body></html>

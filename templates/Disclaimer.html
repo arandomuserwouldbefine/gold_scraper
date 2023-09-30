@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+	<meta name="description" content="gold bar, gold coins, gold accessories">
+    <meta name="keywords" content="gold bar, gold coins, gold accessories">
+	<meta name="author" content="RUBYSOFT">
+    <link rel="icon" sizes="57x57" href="{{ url_for('static', filename='Images/n-logo_1.png') }}">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ url_for('static', filename='Images/favi-57.png') }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='Images/favi-72.png') }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='Images/favi-114.png') }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='Images/favi-144.png') }}">
+
+	<title>Rozaini Gold Bullion And Jewellery</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css')}}">
+	<!--<script src="js/Chart.js"></script>-->
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/animate.min_1.css')}}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/owl.carousel.min.css')}}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/bootstrap-icons.css')}}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/owl.carousel.min_1.css')}}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/owl.theme.default.min.css')}}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/jarallax.css')}}" rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+<!-- <link href="css/main.css?ver=10" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	<script async src="{{ url_for('static', filename='js/analytics.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+	<script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+<style>
+@media screen and (max-width: 1401px) {
+	.block {display: block;}
+	.navbar-toggler {display: block;}
+	.logo {width: 12%;}
+	.navImg {display: none;}
+	.corpBlock {display: block;}
+	.navbar-expand-lg .navbar-nav .nav-link {padding-right: 0;padding-left: 0;}
+}
+@media screen and (min-width: 1401px) {
+	.block {display: none;}
+	.navbar-toggler {display: none;}
+	.navImg {display: block;}
+	.corpBlock {display: none;}
+	.navbar-expand-lg .navbar-nav .nav-link {padding-right: 3rem;padding-left: 3rem;}
+
+}
+@media screen and (max-width: 768px) {
+	.logo {width: 20%;margin-right: 20px}
+}
+@media screen and (max-width: 469px) {
+	.logo {width: 30%;}
+}
+.navbar-brand {	width: 80%;	}
+li.nav-item {white-space: nowrap;}
+.pload {width:40px; height:30px !important;}
+#hours{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 1rem;
+}
+  .mr-2{
+    margin-right: 30px;
+  }
+
+  .ml-2{
+    margin-left: 30px;
+  }
+  .d-inline-flex {
+    display: inline-flex!important;
+}
+  .header-link{
+    font-weight: 800 !important;
+    text-decoration: underline !important;
+    font-size: 36px;
+  }
+  @media (max-width: 1399px) {
+    .close {
+        display: none !important;
+    }
+}
+  @media (min-width: 1400px){
+    .open{
+      display: none !important
+    }
+  }
+
+
+</style></head>
+
+
+
+<body id="top">
+
+
+
+
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="/"><img class="" src="{{ url_for('static', filename='Images/n-logo_1.png')}}" alt="Logo" width="80"></a></a></span>
+
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="/">Rozaini</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Our Products</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="mailto:rozainigoldbullionandjewellery@gmail.com"><img class="" src="{{ url_for('static', filename='products/Images/MailGold.png')}}" alt="" width="50"></a></li>
+                    <li><a href="https://www.instagram.com/rozainigoldbullionjewellery/"><img class="" src="{{ url_for('static', filename='products/Images/InstagramCircleGold.png')}}" alt="Logo" width="50"></a></li>
+                    <li><a href="https://wa.me/601124246969">
+                <img class="" src="{{ url_for('static', filename='Images/WhatsappGold.png')}}" alt="Logo" width="50">
+              </a></li>
+                </ul>
+            </div>
+
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+
+                </div>
+
+                <div class="searchBox">
+                   <div class="searchToggle">
+
+                   </div>
+
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+	<main>
+
+    <div class="row pt-2 mt-6">
+			<div class="col-md-12" data-aos-duration="3000">
+				<div class="corp">
+					<h2>DISCLAIMER</h2>
+				</div>
+			</div>
+		</div>
+    <div class="mr-2 ml-2">
+      <p class="c1"><span class="c5">By visiting the website</span><span class="c5">&nbsp;</span><span class="c5 c7"><a class="c4" href="https://www.google.com/url?q=http://www.rozainigoldbullion.com&amp;sa=D&amp;source=editors&amp;ust=1693796958570718&amp;usg=AOvVaw0p9Kp9SAcx6hOgvfc5ewbz">www.rozainigoldbullion.com</a></span><span class="c6 c5">&nbsp;or any updates thereof (referred to as the &quot;Site&quot;), you, as the user, agree without reservation to abide by the terms of this Disclaimer. These terms may be modified, supplemented, or updated by Jin Huang Bullion (referred to as the &quot;Company&quot;) from time to time, without prior notice to you.</span></p><p class="c0"><span class="c6 c5"></span></p><p class="c1"><span class="c6 c5">Please note that the information available on the Site may not be exhaustive and may require verification on your part or potential amendments by us. The presentation of any information on this platform serves solely as a reference and should not be construed as an offer to sell or a solicitation to purchase any precious metals or other valuable items.</span></p><p class="c0"><span class="c5 c6"></span></p><p class="c1"><span class="c6 c5">As the user with the right to access the Site, you are prohibited from copying or downloading any information from this platform for the purpose of distribution or circulation to others. The information accessible through the Site has not been registered with any regulatory authority in any jurisdiction, and its contents have not undergone review by any regulatory body in Singapore or any other location. The Company is only authorized and regulated by the Singapore Accounting and Corporate Regulatory Authority (ACRA) and the Ministry of Law of Singapore (MoL).</span></p><p class="c1"><span class="c6 c5">The Company does not provide any guarantees regarding the investment or appreciation value of precious metals or other valuable items. If you, as a user, decide to become a purchaser and invest in precious metals, it is strongly recommended that you seek advice from your own professional advisors concerning the potential tax, exchange control, and other implications related to the purchase, holding, or sale of precious metals, in accordance with the laws of your country of citizenship, residence, or domicile.</span></p><p class="c0"><span class="c6 c5"></span></p><p class="c1"><span class="c6 c5">It is important to clarify that nothing on the Site should be considered as investment advice or analysis. The Company explicitly informs the user, who must accept this condition irrevocably, that none of the content on the Site constitutes investment guidance or analysis in any form.</span></p>
+    </div>
+
+    
+  </body></html>
+<!--
+<p class="c1"><span class="c5">By visiting the website</span><span class="c5">&nbsp;</span><span class="c5 c7"><a class="c4" href="https://www.google.com/url?q=http://www.rozainigoldbullion.com&amp;sa=D&amp;source=editors&amp;ust=1693796958570718&amp;usg=AOvVaw0p9Kp9SAcx6hOgvfc5ewbz">www.rozainigoldbullion.com</a></span><span class="c6 c5">&nbsp;or any updates thereof (referred to as the &quot;Site&quot;), you, as the user, agree without reservation to abide by the terms of this Disclaimer. These terms may be modified, supplemented, or updated by Jin Huang Bullion (referred to as the &quot;Company&quot;) from time to time, without prior notice to you.</span></p><p class="c0"><span class="c6 c5"></span></p><p class="c1"><span class="c6 c5">Please note that the information available on the Site may not be exhaustive and may require verification on your part or potential amendments by us. The presentation of any information on this platform serves solely as a reference and should not be construed as an offer to sell or a solicitation to purchase any precious metals or other valuable items.</span></p><p class="c0"><span class="c5 c6"></span></p><p class="c1"><span class="c6 c5">As the user with the right to access the Site, you are prohibited from copying or downloading any information from this platform for the purpose of distribution or circulation to others. The information accessible through the Site has not been registered with any regulatory authority in any jurisdiction, and its contents have not undergone review by any regulatory body in Singapore or any other location. The Company is only authorized and regulated by the Singapore Accounting and Corporate Regulatory Authority (ACRA) and the Ministry of Law of Singapore (MoL).</span></p><p class="c1"><span class="c6 c5">The Company does not provide any guarantees regarding the investment or appreciation value of precious metals or other valuable items. If you, as a user, decide to become a purchaser and invest in precious metals, it is strongly recommended that you seek advice from your own professional advisors concerning the potential tax, exchange control, and other implications related to the purchase, holding, or sale of precious metals, in accordance with the laws of your country of citizenship, residence, or domicile.</span></p><p class="c0"><span class="c6 c5"></span></p><p class="c1"><span class="c6 c5">It is important to clarify that nothing on the Site should be considered as investment advice or analysis. The Company explicitly informs the user, who must accept this condition irrevocably, that none of the content on the Site constitutes investment guidance or analysis in any form.</span></p>
+-->
+
+<script>
+
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+
+            localStorage.setItem("mode" , "dark-mode");
+
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+
+
+</script>
