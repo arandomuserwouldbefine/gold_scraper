@@ -35,7 +35,6 @@ def extract_data(html):
             "price_royalblue": price_royalblue,
             "price_darkteal": price_darkteal
         })
-    
     return extracted_data
 
 

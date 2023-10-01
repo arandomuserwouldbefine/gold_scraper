@@ -311,12 +311,16 @@ function fetchData() {
 		let totalPrice = parseFloat(item.price_darkteal) + parseFloat(item.additional_price);
    	    let formattedPrice = totalPrice.toFixed(2)
    	    formattedPrice = numberWithCommas(formattedPrice)
+   	    let descrip = "Au 9999 Pure Gold";
+   	    if (item.product_name.includes("ilver")){
+   	    	descrip = "Ag 999 Pure Silver"
+   	    }
         var content = `
             <div class="col-lg-3 col-md-6 col-12">
                 <div class="box-image">
                     <img class="img-responsive" src="static/${item.image_path}" alt='gold'>
                     <h2>${item.product_name}</h2>
-                    <span>Au 9999 Pure Gold</span>
+                    <span>${descrip}</span>
                     <h3>${item.currency} ${formattedPrice}</h3>
                 </div>
             </div>
