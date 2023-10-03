@@ -6,6 +6,42 @@ from bs4 import BeautifulSoup
 
 website_url = "https://www.mkspamp.com.my/m/prices.xhtml"
 
+market_url = "https://www.buysilvermalaysia.com/gold-silver-price-today/"
+
+
+def extract_data_from_html():
+    conn = sqlite3.connect("products.db")
+    cursor = conn.cursor()
+    r = requests.get(market_url)
+    html_content= r.text
+    # Define a regular expression pattern to match the data
+    pattern = r'<td style="[^"]*">([^<]+)</td>\s*<td style="[^"]*"><strong>([^<]+)</strong></td>'
+    
+    # Find all matches using the pattern
+    matches = re.findall(pattern, html_content)
+    
+    # Initialize a list to store the formatted data
+    formatted_data = []
+    
+    # Iterate over the matches and format the data
+    for match in matches:
+        static_var = match[0].strip()
+        price = match[1].strip()
+        
+        # Extract product name and price without "/gram" or "/公克" part
+        product_name = re.sub(r'/gram$|/公克$', '', static_var).strip()
+        price_value = re.sub(r'RM\s*', '', price).strip()
+        
+        cursor.execute(f"UPDATE marketPrice set price = ? WHERE product = ?",(price_value,product_name,))
+        conn.commit()
+        product_info = {
+            "product_name": product_name,
+            "price": price_value
+        }
+        
+        formatted_data.append(product_info)
+
+extract_data_from_html()
 
 def scrape_website(url):
     try:
@@ -51,6 +87,10 @@ def update_or_insert_into_database(data):
         price_darkteal = info['price_darkteal'].replace(" ","")  
 
         cursor.execute('''UPDATE products
+                                            SET price_royalblue = ?, price_darkteal = ?
+                                            WHERE product_name = ?''', (price_royalblue, price_darkteal, info['product_name']))
+
+        cursor.execute('''UPDATE ourRates
                                             SET price_royalblue = ?, price_darkteal = ?
                                             WHERE product_name = ?''', (price_royalblue, price_darkteal, info['product_name']))
     

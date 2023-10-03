@@ -1,5 +1,6 @@
 import pytz
 import sqlite3
+import time
 import subprocess
 from datetime import datetime
 from flask import Flask, render_template, jsonify
@@ -7,14 +8,23 @@ from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)
 
+def delete_data(conn, data_id):
+    conn.execute(f"DELETE FROM price_graph WHERE id < {data_id}")
+    conn.commit()
+    print(f"Deleting {data_id}")
+
 def graph_points(array_name):
     utc_timezone = pytz.timezone('UTC')
     current_time = datetime.now(utc_timezone).strftime("%Y-%m-%d %H:%M:%S")
     conn = sqlite3.connect("products.db")
     cursor = conn.cursor()
-    cursor.execute("SELECT price, Timestamp FROM price_graph")
+    cursor.execute("SELECT price, Timestamp, id FROM price_graph")
     data = cursor.fetchall()
     format = '%Y-%m-%d %H:%M:%S'
+    sta = time.time()
+    deleteIds = []
+
+
     for dates in data:
         dateObject1 = datetime.strptime(current_time, format)
         dateObject2 = datetime.strptime(dates[1], format)
@@ -22,13 +32,18 @@ def graph_points(array_name):
         hoursdifference = float('{:.6f}'.format((dateObject1 - dateObject2).total_seconds() / 3600))
         if hoursdifference <= 24.0:
             graph_data = {
+                'id': dates[2],
                 'time': hoursdifference,
                 'value': dates[0]
             }
 
             array_name.append(graph_data)
-
-
+        elif hoursdifference > 24.0:
+            deleteIds.append(dates[2])
+            deleteIds.sort()
+    if len(deleteIds) > 0:
+        delete_data(conn,deleteIds[len(deleteIds)-1])
+        deleteIds = []
 
 def update_cards():
     conn = sqlite3.connect("products.db")
@@ -97,7 +112,7 @@ def get_data():
         conn.close()
 
         result = [{"image_path": row[1],"product_name" : row[2],"price_royalblue": row[3], "price_darkteal": row[4],"additional_price": row[6],"currency":row[5],"ids": row[7]} for row in data]
-        return jsonify(result)
+        return (result)
     except Exception as e:
         return jsonify({"error": str(e)})
 
@@ -109,6 +124,27 @@ def get_graph_data():
         return jsonify(result)
     except Exception as e:
         return jsonify({"error": str(e)})
+
+@app.route("/ourrates",methods=["POST"])
+
+def our_rates():
+    conn = sqlite3.connect("products.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM ourRates")
+    data = cursor.fetchall()
+    result = [{"product_name":row[0],"price_royalblue":row[1],"price_darkteal":row[2],"additional_price":row[3]} for row in data]
+    return jsonify(result)
+
+@app.route("/market",methods=["POST"])
+
+def market_price():
+    conn = sqlite3.connect("products.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM marketPrice")
+    data = cursor.fetchall()
+
+    result = [{"product": row[0],"price":row[1]} for row in data]
+    return jsonify(result)
 
 if __name__ == "__main__":
     scrape_process = subprocess.Popen(['python3', 'scrape.py'])

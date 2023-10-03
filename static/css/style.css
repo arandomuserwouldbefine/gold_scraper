@@ -396,7 +396,11 @@ body.dark{
     --search-bar: #242526;
 }
 
+.rozaini_contact{
+	font-size: 28px;
+	text-transform: uppercase;
 
+}
 .navbar-toggler {
 	background-color: white;
 }

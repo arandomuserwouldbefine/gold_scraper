@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="{{ url_for('static', filename='Images/favi-72.png') }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ url_for('static', filename='Images/favi-114.png') }}">
     <link rel="apple-touch-icon" sizes="144x144" href="{{ url_for('static', filename='Images/favi-144.png') }}">
-
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 	<title>Rozaini Gold Bullion And Jewellery</title>
 
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.min.css')}}">
@@ -148,29 +148,35 @@ html{
 						<tr>
 							<th class="header">DETAILS</th>
 							<th class="header">WE BUY</th>
+							<th class="header">WE SELL</th>
 
 						</tr>
 					</thead>
 					<tbody class="spn_data">
 						<tr>
-							<td>Gold / 1KG</td>
-							<td><span id="gold1000" style="color: black;"></span></td>
+							<td>999 Gold USD / Oz</td>
+							<td><span id="goldusd_buy" style="color: black;"></span></td>
+							<td><span id="goldusd_sell" style="color: black;"></span></td>
 						</tr>
 						<tr>
-							<td>Gold / 500G</td>
-							<td><span id="gold500" style="color: black;"></span></td>
+							<td>USD/MYR</td>
+							<td><span id="usd_myr_buy" style="color: black;"></span></td>
+							<td><span id="usd_myr_sell" style="color: black;"></span></td>
 						</tr>
 						<tr>
-							<td>Gold / 100G</td>
-							<td><span id="gold100" style="color: black;"></span></td>
+							<td>999.9 Gold MYR / KG</td>
+							<td><span id="gold1000_buy" style="color: black;"></span></td>
+							<td><span id="gold1000_sell" style="color: black;"></span></td>
 						</tr>
 						<tr>
-							<td>Gold / 50G</td>
-							<td><span id="gold50" style="color: black;"></span></td>
+							<td>999.9 GOld MYR / tael</td>
+							<td><span id="goldtael_buy" style="color: black;"></span></td>
+							<td><span id="goldtael_sell" style="color: black;"></span></td>
 						</tr>
 						<tr>
-							<td>Gold / 10G</td>
-							<td><span id="gold10" style="color: black;"></span></td>
+							<td>Gold / 1G</td>
+							<td><span id="gold1_buy" style="color: black;"></span></td>
+							<td><span id="gold1_sell" style="color: black;"></span></td>
 						</tr>
 					</tbody>
 				</table>
@@ -188,25 +194,25 @@ html{
 					</thead>
 					<tbody class="cus_data">
 						<tr>
-							<td>999.9 Gold MYR / Gram</td>
-							<td><span id="gold9999" style="color: black;"></span></td>
-						</tr>
-						<tr>
 							<td>999 Gold MYR / Gram</td>
-							<td><span id="gold999" style="color: black;"></span></td>
+							<td><span id="999gold" style="color: black;">0</span></td>
 						</tr>
 						<tr>
 							<td>916 Gold MYR / Gram</td>
-							<td><span id="gold916" style="color: black;"></span></td>
+							<td><span id="916gold" style="color: black;">0</span></td>
+						</tr>
+						<tr>
+							<td>835 Gold MYR / Gram</td>
+							<td><span id="835gold" style="color: black;">0</span></td>
 						</tr>
 
 						<tr>
 							<td>750 Gold MYR / Gram</td>
-							<td><span id="gold750" style="color: black;"></span></td>
+							<td><span id="750gold" style="color: black;">0</span></td>
 						</tr>
 						<tr>
 							<td>375 Gold MYR / Gram</td>
-							<td><span id="gold375" style="color: black;"></span></td>
+							<td><span id="375gold" style="color: black;">0</span></td>
 						</tr>
 					</tbody>
 				</table>
@@ -238,7 +244,7 @@ html{
 		</div>
 
 <div class="col-md-12" data-aos="fade-up" data-aos-duration="3000">
-  <canvas id="myChart" width="100"></canvas>
+  <canvas id="myChart" width="100" height="100"></canvas>
 </div>
     
     <div class="container aos-init aos-animate" style="max-width: 359px; padding-bottom: 60px;" data-aos="fade-up" data-aos-duration="3000">
@@ -253,24 +259,24 @@ html{
 			</thead>
 			<tbody class="mk-table">
 				<tr>
-					<td>1g Bar / Coin 999.9</td>
-					<td><span id="gold1g" style="color: black;"></span></td>
+					<td>999</td>
+					<td><span id="999" style="color: black;">0</span></td>
 				</tr>
 				<tr>
-					<td>5g Bar / Coin 999.9</td>
-					<td><span id="gold5g" style="color: black;"></span></td>
+					<td>916</td>
+					<td><span id="916" style="color: black;">0</span></td>
 				</tr>
 				<tr>
-					<td>1 Dinar 999</td>
-					<td><span id="dinar" style="color: black;"></span></td>
+					<td>835</td>
+					<td><span id="835" style="color: black;">0</span></td>
 				</tr>
 				<tr>
-					<td>1 Dirham</td>
-					<td><span id="" style="color: black;">19.11</span></td>
+					<td>750</td>
+					<td><span id="750" style="color: black;">0</span></td>
 				</tr>
 				<tr>
-					<td>5 Dirham</td>
-					<td><span id="" style="color: black;">90.02</span></td>
+					<td>375</td>
+					<td><span id="375" style="color: black;">0</span></td>
 				</tr>
 			</tbody>
 		</table>
@@ -322,7 +328,6 @@ html{
 	</div>
 <footer>
   </body>
-  <script>AOS.init();</script>
 <script type="text/javascript">
 	// function fetchTableData(){
 	// 	let table_data = document.querySelector(".spn_data");
@@ -421,8 +426,97 @@ html{
 	// 		})
 	// 	})
 	// }
-// fetchTableData()
-// setInterval(fetchTableData,5000)
+function numberWithCommas(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+function ourRate(){
+	let goldUsdBuy = document.getElementById("goldusd_buy");
+	let goldUsdSell = document.getElementById("goldusd_sell");
+	let usdMyrBuy = document.getElementById("usd_myr_buy");
+	let usdMyrSell = document.getElementById("usd_myr_sell");
+	let gold1000Buy = document.getElementById("gold1000_buy");
+	let gold1000Sell = document.getElementById("gold1000_sell");
+	let goldTaelBuy = document.getElementById("goldtael_buy");
+	let goldTaelSell = document.getElementById("goldtael_sell");
+	let gold1Buy = document.getElementById("gold1_buy");
+	let gold1Sell = document.getElementById("gold1_sell");
+
+	fetch(`/ourrates`,option={
+		method: 'POST'
+	})
+	.then(response=>response.json())
+	.then(data=>{
+		data.forEach((item)=>{
+			if(item.product_name === "Gold Oz"){
+				goldUsdBuy.innerHTML = numberWithCommas(item.price_royalblue);
+				goldUsdSell.innerHTML = numberWithCommas(item.price_darkteal);
+			}
+
+			else if(item.product_name === "USD/MYR"){
+				usdMyrBuy.innerHTML = numberWithCommas(item.price_royalblue);
+				usdMyrSell.innerHTML = numberWithCommas(item.price_darkteal);
+			}
+
+			else if(item.product_name === "Gold   : 1 Kilo 999.9 (MYR)"){
+				gold1000Buy.innerHTML = numberWithCommas(item.price_royalblue);
+				gold1000Sell.innerHTML = numberWithCommas(item.price_darkteal);
+				gold1Buy.innerHTML = numberWithCommas((item.price_royalblue / 1000).toFixed(2));
+				gold1Sell.innerHTML = numberWithCommas((item.price_darkteal / 1000).toFixed(2));
+			}
+
+			else if(item.product_name === "Gold   : 1 Tael 999.9 (MYR)"){
+				goldTaelBuy.innerHTML = numberWithCommas(item.price_royalblue);
+				goldTaelSell.innerHTML = numberWithCommas(item.price_darkteal);
+			}
+
+			else if(item.product_name === "Gold   : 1 Tael 999.9 (MYR)"){
+				goldTaelBuy.innerHTML = numberWithCommas(item.price_royalblue);
+				goldTaelSell.innerHTML = numberWithCommas(item.price_darkteal);
+			}
+
+
+		})
+	})
+
+}
+
+setInterval(ourRate,8000)
+
+function marketPrice(){
+	let first = document.getElementById("999");
+	let second = document.getElementById("916");
+	let third = document.getElementById("835");
+	let fourth = document.getElementById("750");
+	let fifth = document.getElementById("375");
+
+	fetch(`/market`,option={
+		method: 'POST'
+	})
+
+	.then(response =>response.json())
+
+	.then(data=>{
+		data.forEach((item)=>{
+			if(item.product=="Retail Shop 999 Gold"){
+				first.innerHTML = item.price.split("/")[0];
+			}
+			else if(item.product=="Retail Shop 916 Gold"){
+				second.innerHTML =item.price.split("/")[0];
+			}
+			else if(item.product=="Retail Shop 835 Gold"){
+				third.innerHTML = item.price.split("/")[0];
+			}
+			else if(item.product=="Retail Shop 750 Gold"){
+				fourth.innerHTML = item.price.split("/")[0];
+			}
+			else{
+				fifth.innerHTML =item.price.split("/")[0];
+			}
+		})
+	})
+}
+
+setInterval(marketPrice,1000)
 function setTableData() {
   fetch(`https://api.onewoorks.com/buybackemas/mks-price?tolak=-2&price=0`)
     .then(response => response.text())
@@ -460,84 +554,14 @@ function setTableData() {
         };
 
         let pricetael = newData.price_tael;
-	      document.getElementById('gold9999').innerHTML = (pricetael / 37.8 * 0.99-0.58).toFixed(2);
-	      document.getElementById('gold999').innerHTML = (pricetael / 37.8 * 0.98-3.48).toFixed(2);
-	      document.getElementById('gold916').innerHTML = (pricetael / 37.8 * 0.90-3.15).toFixed(2);
-	      document.getElementById('gold750').innerHTML = (pricetael / 37.8 * 0.72-2.53).toFixed(2);
-	      document.getElementById('gold375').innerHTML = (pricetael / 37.8 * 0.30-1.05).toFixed(2);  
 	  
+	      
+	    document.getElementById('999gold').innerHTML = (pricetael / 37.8 * 0.98).toFixed(2);
+	    document.getElementById('916gold').innerHTML = (pricetael / 37.8 * 0.90).toFixed(2);
+	    document.getElementById('835gold').innerHTML = (pricetael / 37.8 * 0.82).toFixed(2);
+	    document.getElementById('750gold').innerHTML = (pricetael / 37.8 * 0.72).toFixed(2);
+	    document.getElementById('375gold').innerHTML = (pricetael / 37.8 * 0.30).toFixed(2);    
 
-
-    const gold1000Element = document.getElementById('gold1000');
-    const formattedPrice1000 = (pricetael / 37.8 * 1000 + 70).toLocaleString('en-MY', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-    });
-    gold1000Element.innerHTML = formattedPrice1000;
-
-  //Gold 500
-    const gold500Element = document.getElementById('gold500');
-    const formattedPrice500 = (pricetael / 37.8 * 500 + 210).toLocaleString('en-MY', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-    });
-
-    gold500Element.innerHTML = formattedPrice500;
-  
-  //Gold 100
-  const gold100Element = document.getElementById('gold100');
-    const formattedPrice100 = (pricetael / 37.8 * 100 + 70).toLocaleString('en-MY', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-    });
-
-    gold100Element.innerHTML = formattedPrice100;
-  
-  //Gold 50
-  const gold50Element = document.getElementById('gold50');
-    const formattedPrice50 = (pricetael / 37.8 * 50 + 90).toLocaleString('en-MY', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-    });
-
-    gold50Element.innerHTML = formattedPrice50;
-  
-  //Gold 10
-  const gold10Element = document.getElementById('gold10');
-    const formattedPrice10 = (pricetael / 37.8 * 10 + 70).toLocaleString('en-MY', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-    });
-
-    gold10Element.innerHTML = formattedPrice10;
-
-
-	// 1g bar/coin
-    const gold1gElement = document.getElementById('gold1g');
-    const formattedPrice1 = (pricetael / 37.8 * 1 + 17).toLocaleString('en-MY', {
-        minimumFractionDigits: 0, 
-        maximumFractionDigits: 2,
-    });
-
-    gold1gElement.innerHTML = formattedPrice1;
-
-    // 5g bar/coin
-    const gold5gElement = document.getElementById('gold5g');
-    const formattedPrice5 = (pricetael / 37.8 * 5 + 48).toLocaleString('en-MY', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-    });
-
-    gold5gElement.innerHTML = formattedPrice5;
-	
-	// 1 Dinar
-    const dinargElement = document.getElementById('dinar');
-    const formattedPrice4 = (pricetael / 37.8 * 4 + 118).toLocaleString('en-MY', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-    });
-
-    dinargElement.innerHTML = formattedPrice4;
       } else {
         console.error('One or more properties not found in JSON data');
       }
@@ -652,8 +676,9 @@ function updateChart() {
 fetchGraphData();
 
 // Fetch graph data every 10 seconds
-setInterval(fetchGraphData, 5000);
+setInterval(fetchGraphData, 20000);
 </script>
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
@@ -678,6 +703,7 @@ setInterval(fetchGraphData, 5000);
  localStorage.setItem("mode" , "dark-mode");
 
 </script>
+  <script>AOS.init();</script>
 
 <script>
 
