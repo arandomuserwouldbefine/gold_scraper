@@ -81,14 +81,23 @@ def update_or_insert_into_database(data):
     price_royalblue = 0
     price_darkteal = 0
     existing_data = cursor.fetchone()
+
+    
     for info in data:
         cursor.execute('''SELECT * FROM products WHERE product_name = ?''', (info['product_name'],))
         price_royalblue = info['price_royalblue'].replace(" ","")
         price_darkteal = info['price_darkteal'].replace(" ","")  
+        gram500Price = 0
+        if info["product_name"] == "Gold   : 100 GM 999.9 (MYR)":
+            price_darkteal_numeric = float(price_darkteal)
+            gram500Price = price_darkteal_numeric * 5
+            cursor.execute('''UPDATE products SET price_darkteal = ? WHERE id = ?''', (gram500Price, 2))
 
         cursor.execute('''UPDATE products
                                             SET price_royalblue = ?, price_darkteal = ?
                                             WHERE product_name = ?''', (price_royalblue, price_darkteal, info['product_name']))
+
+
 
         cursor.execute('''UPDATE ourRates
                                             SET price_royalblue = ?, price_darkteal = ?
@@ -166,6 +175,7 @@ if __name__ == "__main__":
     while True:
         html_content = scrape_website(website_url)
         product_info_list = extract_product_info(u)
+        time.sleep(4)
 
 
 

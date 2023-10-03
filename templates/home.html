@@ -57,7 +57,7 @@ html{
    <nav>
         <div class="nav-bar">
             <i class='bx bx-menu sidebarOpen' ></i>
-            <span class="logo navLogo"><a href="/"><img class="logo" src="{{ url_for('static', filename='Images/n-logo_1.png')}}" alt="Logo" width="50"></a></span>
+            <span class="logo navLogo"><a href="/"><img class="logo" src="{{ url_for('static', filename='Images/n-logo_1.png')}}" alt="Logo" width="100"></a></span>
 
             <div class="menu">
                 <div class="logo-toggle">
@@ -301,6 +301,7 @@ html{
 		<div class="contact_detail">
 			<ul type="none" class="contact_det">
 				<li class="list_title">Contact Details</li>
+				<li class="list_items">ROZAINI GOLD BULLION AND JEWELLERY (MA0303087-T)</li>
 				<li  class="list_items">No. 48, Jalan Baiduri 1, Taman Pulau Melaka, 75000, Melaka</li>
 				<li  class="list_items">+6011 2424 6969</li>
 			</ul>
@@ -480,7 +481,7 @@ function ourRate(){
 
 }
 
-setInterval(ourRate,8000)
+setInterval(ourRate,15000)
 
 function marketPrice(){
 	let first = document.getElementById("999");
@@ -516,7 +517,7 @@ function marketPrice(){
 	})
 }
 
-setInterval(marketPrice,1000)
+setInterval(marketPrice,10000)
 function setTableData() {
   fetch(`https://api.onewoorks.com/buybackemas/mks-price?tolak=-2&price=0`)
     .then(response => response.text())
@@ -573,7 +574,7 @@ function setTableData() {
 
 
 setTableData()
-setInterval(setTableData,3000)
+setInterval(setTableData,8000)
 
 function updateClock() {
   const clockElement = document.getElementById('custom-time'); // Replace 'clock' with the ID of your HTML element
@@ -591,7 +592,7 @@ function updateClock() {
 }
 
 // Update the clock every second
-setInterval(updateClock, 3000);
+setInterval(updateClock, 6000);
 
 
 // Call updateClock immediately to display the initial time
@@ -613,7 +614,7 @@ function updateDate() {
 }
 
 // Update the date every second
-setInterval(updateDate, 1000);
+setInterval(updateDate, 3000);
 
 // Call updateDate immediately to display the initial date
 updateDate();
@@ -676,7 +677,7 @@ function updateChart() {
 fetchGraphData();
 
 // Fetch graph data every 10 seconds
-setInterval(fetchGraphData, 20000);
+setInterval(fetchGraphData, 30000);
 </script>
 <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
